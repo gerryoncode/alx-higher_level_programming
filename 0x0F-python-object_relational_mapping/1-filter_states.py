@@ -9,7 +9,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2], db=sys.argv[3], port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE SUBSTRING(name, 1, 1)= 'N' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name = 'N%' ORDER BY id ASC")
     rows = cur.fetchall()
     for row in rows:
         print(row)
