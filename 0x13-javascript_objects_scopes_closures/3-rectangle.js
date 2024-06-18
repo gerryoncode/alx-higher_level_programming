@@ -1,20 +1,19 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if (w > 0 && h > 0 && Number.isInteger(w) && Number.isInteger(h)) {
+    if ((w > 0) && (h > 0)) {
       this.width = w;
       this.height = h;
     }
   }
 
   print () {
-    let rec = '';
     for (let i = 0; i < this.height; i++) {
+      let s = '';
       for (let j = 0; j < this.width; j++) {
-        rec += 'x';
+        s += 'X';
       }
-      console.log(rec);
-      rec = '';
+      console.log(s);
     }
   }
 }
